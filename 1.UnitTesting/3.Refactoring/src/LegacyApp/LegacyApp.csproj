@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
@@ -11,5 +11,8 @@
       <PackageReference Include="System.Private.ServiceModel" Version="4.8.1" />
       <PackageReference Include="System.ServiceModel.Primitives" Version="4.8.1" />
     </ItemGroup>
-
+	<ItemGroup>
+		<InternalsVisibleTo Include="$(AssemblyName).Tests.Unit"/>
+		<InternalsVisibleTo Include="DynamicProxyGenAssembly2"/>
+	</ItemGroup>
 </Project>
